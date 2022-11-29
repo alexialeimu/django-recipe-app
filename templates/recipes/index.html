@@ -1,11 +1,6 @@
 {% extends "base.html" %}
-
 {% block content %}
-
     {% if all_recipes %}
-        {% for recipe in all_recipes %}
-            <h1>{{ recipe.name }}</h1>
-        {% endfor %}
+        {% for recipe in all_recipes %}<h1>{{ recipe.name }}</h1>{% endfor %}
     {% endif %}
-
-{% endblock %}
+{% endblock content %}
