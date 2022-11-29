@@ -1,3 +1,4 @@
+{% load tailwind_tags %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,10 +7,16 @@
         <meta name="keywords" content="resepti"/>
         <meta http-equiv="X-UA-Compatible" content="IE=edge" />
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        {% tailwind_css %}
         <title>Reseptikirja</title>
     </head>
-    <body>
-        <div class="container">
+    <body class="bg-slate-300">
+        {% include "navigation.html" %}
+        <div class="container flex flex-col mx-auto pt-16 space-y-16">
+            <h1 class="mx-auto text-5xl">
+                {% block title %}
+                {% endblock title %}
+            </h1>
             {% block content %}
             {% endblock content %}
         </div>
