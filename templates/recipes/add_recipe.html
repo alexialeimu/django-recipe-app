@@ -1,0 +1,16 @@
+{% extends "base_section.html" %}
+
+{% block title %}
+    Add recipe
+{% endblock title %}
+ 
+{% block section %}
+    <form method="POST"
+          enctype="multipart/form-data"
+          class="flex flex-col space-y-4">
+        {% csrf_token %}
+        {{ form }}
+        <button type="submit"
+                class="w-1/3 bg-gray-300 font-bold py-2 px-4 mx-auto rounded-full">Add recipe</button>
+    </form>
+{% endblock section %}

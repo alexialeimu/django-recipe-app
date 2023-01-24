@@ -23,13 +23,15 @@
                     <div class="relative px-4 -mt-16">
                         <div class="bg-white p-6 rounded-lg shadow-lg">
                             <div class="flex items-baseline">
-                                <div class="text-slate-500 uppercase text-xs font-semibold tracking-wider">
+                                <div class="text-slate-500 uppercase text-xs tracking-wider">
                                     Pääruoka &bull;
                                     {{ recipe.cooking_time }} min
                                 </div>
                             </div>
  
-                            <h4 class="my-3 text-lg font-semibold leading-tight truncate">{{ recipe.name }}</h4>
+                            <h4 class="my-3 text-lg font-semibold leading-tight truncate">
+                                <a href="{% url 'recipes:recipe' recipe.id %}">{{ recipe.name }}</a>
+                            </h4>
 
                             <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                                 Uusi

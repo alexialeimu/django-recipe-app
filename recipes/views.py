@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from django.http import HttpResponse, Http404
+from django.shortcuts import render, redirect
+from django.http import HttpResponse, Http404, HttpResponseRedirect
+from .forms import AddRecipeForm
 from .models import Recipe
 
 def index(request):
@@ -13,3 +14,13 @@ def recipe(request, recipe_id):
     except Recipe.DoesNotExist:
         raise Http404("Does not exist")
     return render(request, 'recipes/recipe.html', {'recipe': recipe})
+
+def addRecipeView(request):
+    if request.method == 'POST':
+        form = AddRecipeForm(request.POST, request.FILES)
+        if form.is_valid():
+            form.save()
+            return HttpResponseRedirect('/')
+    else:
+            form = AddRecipeForm()
+    return render(request, 'recipes/add_recipe.html', {'form': form})
