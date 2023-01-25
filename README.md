@@ -16,7 +16,7 @@ Install Python 3.11.0 and Postgres 15.1
 Clone the repository
 
 ```bash
-$ git clone git@github.com:alexialeimu/djangoRecipeApp.git
+$ git clone git@github.com:alexialeimu/django-recipe-app.git
 $ cd djangoRecipeApp
 ```
 
