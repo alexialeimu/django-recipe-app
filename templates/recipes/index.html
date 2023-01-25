@@ -14,7 +14,7 @@
                         {% if recipe.image %}
                             <img src="{{ recipe.image.url }}"
                                  alt="image"
-                                 class="h-72 object-cover object-center rounded-lg shadow-md w-full"/>
+                                 class="recipe-list-image h-72 object-cover object-center rounded-lg shadow-md w-full"/>
                         {% else %}
                             <div class="rounded-lg shadow-md w-full h-72 bg-gray-200"></div>
                         {% endif %}
@@ -33,12 +33,12 @@
                                 <a href="{% url 'recipes:recipe' recipe.id %}">{{ recipe.name }}</a>
                             </h4>
 
-                            <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
+                            {% comment %} <span class="bg-teal-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                                 Uusi
                             </span>
                             <span class="bg-yellow-200 text-teal-800 text-xs px-2 inline-block rounded-full  uppercase font-semibold tracking-wide">
                                 Kasvis
-                            </span>
+                            </span> {% endcomment %}
                         </div>
                     </div>
  

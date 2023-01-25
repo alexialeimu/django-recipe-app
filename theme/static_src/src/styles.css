@@ -61,3 +61,11 @@ ol#recipe-instructions li>p {
     background-size: cover;
     min-height: 50vh;
 }
+
+img.recipe-list-image {
+    transition: transform .4s ease-in-out;
+}
+
+img.recipe-list-image:hover {
+    transform: scale(1.05)
+}
