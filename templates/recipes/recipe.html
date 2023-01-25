@@ -1,8 +1,33 @@
 {% extends "base_section.html" %}
 
+{% load markdownify %}
+
 {% block title %}
     {{ recipe.name }}
 {% endblock title %}
  
 {% block section %}
+    <div class="-mt-12 space-y-16">
+
+        <div class="info-tab text-sm flex flex-row justify-center">
+            <span class="mr-4">{{ recipe.cooking_time }} min</span>
+            &bull;
+            <span class="ml-4">vegan, lunch</span>
+        </div>
+
+        <div class="flex flex-col-reverse lg:flex-row md:w-4/5 mx-auto">
+            <div class="text-sm bg-gray-100 p-16 w-100 lg:w-1/2">
+                <h2 class="font-medium uppercase mb-4">Ainesosat</h2>
+                {{ recipe.ingredients | markdownify | linebreaksbr }}
+            </div>
+            <div class="recipe-image w-100 h-96 lg:w-1/2 lg:h-auto"
+                 style="background-image: url({{ recipe.image.url }})"></div>
+        </div>
+ 
+        <div class="container w-3/4 lg:w-1/2 mx-auto">
+            <h2 class="text-2xl font-bold text-center mb-8">Valmistusohjeet</h2>
+            {{ recipe.instructions | markdownify | linebreaksbr }}
+        </div>
+    </div>
+
 {% endblock section %}

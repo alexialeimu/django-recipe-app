@@ -43,6 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'recipes',
+    'markdownify', #markdownify
     'tailwind',
     'theme', # tailwind
     'django_browser_reload', # tailwind
@@ -144,3 +145,10 @@ INTERNAL_IPS = [
 
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# MARKDOWNIFY_STRIP = False
+# MARKDOWNIFY_WHITELIST_TAGS = {
+#  'a', 'p', 
+#  'h1', 'h2', 'h3','h4', 'h5', 'h6', 'h7',
+#  'ul', 'li', 'span',
+# }
