@@ -9,7 +9,7 @@
         <div class="w-100 flex flex-col flex-wrap sm:flex-row justify-center -mx-2 antialiased text-gray-900">
             {% for recipe in all_recipes %}
 
-                <div class="w-full p-4 mx-auto sm:-mx-2 sm:w-1/2 lg:w-1/3 xl:w-1/4 max-w-lg md:p-3">
+                <div class="w-full p-4 mx-auto sm:-mx-2 sm:w-1/2 lg:w-1/3 xl:w-1/4 max-w-lg">
                     <a href="{% url 'recipes:recipe' recipe.id %}">
                         {% if recipe.image %}
                             <img src="{{ recipe.image.url }}"

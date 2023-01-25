@@ -40,4 +40,24 @@ h1 {
 
 .custom-shape-divider-top-1672852377 .shape-fill {
     fill: #FED84963;
-}       
+}
+
+.info-tab {
+    font-weight: 200;
+    font-style: italic;
+}
+
+ol#recipe-instructions li::marker {
+    font-size: 1.6em;
+    font-weight: 400;
+}
+
+ol#recipe-instructions li>p {
+    transform: translateY(-6px);
+    margin-left: 12px;
+}
+
+.recipe-image {
+    background-size: cover;
+    min-height: 50vh;
+}
