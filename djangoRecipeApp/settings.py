@@ -47,6 +47,7 @@ INSTALLED_APPS = [
     'tailwind',
     'theme', # tailwind
     'django_browser_reload', # tailwind
+    'taggit' # django-taggit
 ]
 
 MIDDLEWARE = [

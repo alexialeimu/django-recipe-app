@@ -12,7 +12,15 @@
         <div class="info-tab text-sm flex flex-row justify-center">
             <span class="mr-4">{{ recipe.cooking_time }} min</span>
             &bull;
-            <span class="ml-4">vegan, lunch</span>
+            <span class="ml-4">
+                {% for tag in recipe.tags.all %}
+                    {% if forloop.last is False %}
+                        {{ tag.name }},
+                    {% else %}
+                        {{ tag.name }}
+                    {% endif %}
+                {% endfor %}
+            </span>
         </div>
 
         <div class="flex flex-col-reverse lg:flex-row md:w-4/5 mx-auto">
